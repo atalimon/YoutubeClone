@@ -148,6 +148,7 @@ nav button {
   flex-direction: column;
   margin-bottom: 15px;
   margin-top: 15px;
+  background-color: #f9f9f9;
 }
 
 .nav-link {
