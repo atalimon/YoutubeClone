@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: black;
 }
 
 body {
@@ -28,7 +29,8 @@ main {
   height: 100%;
   width: 17%;
   background-color: white;
-  overflow-y: hidden;
+  overflow-y: scroll;
+  color: black;
 }
 .left{
   display: flex;
@@ -45,26 +47,26 @@ main {
 }
 
 .searchbar form {
+  align-items: center;
   display: flex;
   border: 1px solid #ddd;
   height: 45px;
-  border-radius: 20px;
+  border-radius:15px;
   align-items: center;
-
-  
+  width: 40rem;
 }
 
 .searchbar input {
-  width: 600px;
-  padding: 10px;
-  border:0;
-  height: 100%;
-  border-radius: 20px;
+  margin-left: 2.9%;
+  width: 90%;
+  padding: 5px;
+  border:none;
+  height: 50%;
 }
 
 input:focus {
   outline: none;
-  border: 1px solid #f9f9f9;
+  border: none;
 }
 .recomended-categories {
   display: flex;
@@ -77,6 +79,7 @@ input:focus {
   place-items: center;
   margin-left: 0%;
 
+
 }
 .recomended-categories nav::-webkit-scrollbar {
   display: none;
@@ -86,7 +89,7 @@ input:focus {
   transition: background-color 0.2s ease;
 }
 nav {
-  background:#ffffff;
+  background:#f9f9f9;
   text-align: center;
   margin: auto;
   place-items: center;
@@ -100,12 +103,12 @@ nav {
   overflow-x: scroll;
   overflow-y: hidden;
   vertical-align: top;
-  border-bottom: 1px solid rgb(235, 233, 233);
-  border-top: 1px solid rgb(235, 233, 233);
   padding: 12px 0;
   z-index: 2;
 }
+
 nav button {
+  background-color: #e5e5e5;
   text-align: center;
   margin: auto;
   place-items: center;
@@ -115,18 +118,21 @@ nav button {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 6px;
   margin-right: 0;
-  border: 1px solid lightgrey;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 6px 10px;
   cursor: pointer;
+  border: #f9f9f9;
+  outline: none;
 }
 .searchbar button {
-  height: 80%;
-  width: 30px;
+  float: right;
+  height: 100%;
+  width: 50px;
   border: none;
-  left: 30%;
-  border-radius: 15px;
+  border-radius: 0px 15px 15px 0px ;
+  border-left: 1px solid #e5e5e5;
 }
+
 .mic {
   margin-top: 10px;
 }
@@ -155,19 +161,29 @@ nav button {
 .nav-link:hover {
   background: #e5e5e5;
   cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
 }
 .nav-link  img {
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+  margin-left: 5%;
 }
-.active {
-  background: #e5e5e5;
-}
+
 hr {
   height: 1px;
   background-color: #e5e5e5;
   border: none;
+}
+p.heading{
+  margin-left: 17%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+span.dot {
+  color: aqua;
+  font-size: 30px;
 }
 .content {
   background-color: #f9f9f9;
@@ -233,16 +249,26 @@ hr {
   .searchbar input {
     width: 30rem;
   }
+  .searchbar form {
+    width: 30rem;
+  }
 }
 
 @media (max-width: 900px){
   .searchbar input {
     width: 25rem;
   }
+  .searchbar form {
+    width: 25rem;
+  }
+
 }
 
 @media (max-width: 810px){
   .searchbar input {
+    width: 20rem;
+  }
+  .searchbar form {
     width: 20rem;
   }
 }
@@ -254,6 +280,9 @@ hr {
   .searchbar input {
     width: 15rem;
   }
+  .searchbar form {
+    width: 15rem;
+  }
 
   
 }
@@ -262,6 +291,12 @@ hr {
     display: none;
   }
   .searchbar input {
+    width: 7rem;
+  }
+  i.material-icons.mic{
+    display: none;
+  }
+  .searchbar form {
     width: 10rem;
   }
 
@@ -271,15 +306,14 @@ hr {
   .side-bar {
     display: none;
   }
- i.material-icons   {
-    display: none;
-  }
+
   .searchbar input {
     display: none;
   }
 .searchbar form {
   border: none;
   outline: none;
+  display: none;
 }
 .searchbar {
   margin-left: 20%;
