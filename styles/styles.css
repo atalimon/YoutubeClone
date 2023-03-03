@@ -25,12 +25,13 @@ main {
   display: flex;
   background-color: #f9f9f9;
 }
-.sidebar {
+.side-bar {
   height: 100%;
   width: 17%;
   background-color: white;
-  overflow-y: scroll;
+  overflow-y: auto;
   color: black;
+
 }
 .left{
   display: flex;
@@ -210,6 +211,9 @@ span.dot {
   width: 100%;
   height: 200px;
 }
+.altnav {
+  display: none;
+}
 .thumbnail img {
   object-fit: cover;
   height: 94%;
@@ -253,7 +257,54 @@ span.dot {
   .searchbar form {
     width: 30rem;
   }
+  .nav {
+    display: none;
+  }
+  .side-bar{
+    width: 15%;
+  }
+
+ 
+  .altnav {
+    display: block;
+    margin-top: 25%;
+  }
+  i  span {
+
+    align-self: flex-end;
+
+  }
+.altnav a {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.altnav span {
+  margin-top: 10%;
+
+}
+.nav-link span {
+  margin-left: 0;
+}
+}
+  @media (max-width: 499px) {
+    .side-bar {
+      display: none;
+    }
+    .searchbar input {
+      display: none;
+    }
+  .searchbar form {
+    border: none;
+    outline: none;
+  }
+  .searchbar {
+    margin-left: 20%;
+  }
+    
+  }
+
 
 @media (max-width: 900px){
   .searchbar input {
@@ -275,9 +326,36 @@ span.dot {
 }
 
 @media (max-width: 730px) {
-  .side-bar {
+  .nav {
     display: none;
   }
+  .side-bar{
+    width: 15%;
+  }
+
+ 
+  .altnav {
+    display: block;
+    margin-top: 25%;
+  }
+  i  span {
+
+    align-self: flex-end;
+
+  }
+.altnav a {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.altnav span {
+  margin-top: 10%;
+
+}
+.nav-link span {
+  margin-left: 0;
+}
   .searchbar input {
     width: 15rem;
   }
@@ -288,8 +366,11 @@ span.dot {
   
 }
 @media (max-width: 650px) {
-  .side-bar {
+  .nav {
     display: none;
+  }
+  .altnav {
+    display: block;
   }
   .searchbar input {
     width: 7rem;
@@ -337,4 +418,30 @@ span.dot {
   margin-left: 20%;
 }
   
+}
+
+@media (max-width: 499px) {
+  .side-bar {
+    display: none;
+  }
+  .searchbar input {
+    display: none;
+  }
+.searchbar form {
+  border: none;
+  outline: none;
+}
+.searchbar {
+  margin-left: 20%;
+}
+  .material-icons{
+    display: none;
+  }
+  #acccircle {
+    display: block;
+  }
+  #menu {
+    display: none;
+  }
+
 }
